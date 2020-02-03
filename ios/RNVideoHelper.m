@@ -102,12 +102,12 @@ RCT_EXPORT_METHOD(compress:(NSString *)source options:(NSDictionary *)options re
         endT = nil;
     }
     
-    if (startT || endT) {
-        CMTime startTime = CMTimeMake((startT) ? [startT floatValue] : 0, 1);
-        CMTime stopTime = CMTimeMake((endT) ? [endT floatValue] : duration, 1);
-        CMTimeRange exportTimeRange = CMTimeRangeFromTimeToTime(startTime, stopTime);
-        encoder.timeRange = exportTimeRange;
-    }
+    // if (startT || endT) {
+    //     CMTime startTime = CMTimeMake((startT) ? [startT floatValue] : 0, 1);
+    //     CMTime stopTime = CMTimeMake((endT) ? [endT floatValue] : duration, 1);
+    //     CMTimeRange exportTimeRange = CMTimeRangeFromTimeToTime(startTime, stopTime);
+    //     encoder.timeRange = exportTimeRange;
+    // }
     
     encoder.videoSettings = @{
       AVVideoCodecKey: AVVideoCodecH264,
